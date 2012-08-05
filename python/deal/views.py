@@ -5,8 +5,5 @@ from models import Deal
 
 
 def detail(request, deal_id):
-    try:
-        d = Deal.objects.get(pk=deal_id)
-    except Deal.DoesNotExist:
-        raise Http404
-    return render_to_response('deal/detail.html', {'deal': d})
+    d = get_object_or_404(Deal, pk=deal_id)
+    return render_to_response('detail.html', {'deal': d})

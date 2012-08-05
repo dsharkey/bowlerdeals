@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 # Create your models here.
 
@@ -8,8 +9,8 @@ class Deal(models.Model):
     
     # image_name = models.CharField(max_length=512)
 
-    start_date = models.DateTimeField(default=datetime.now, db_index=True)
+    start_date = models.DateTimeField(default=datetime.datetime.utcnow, db_index=True)
     end_date = models.DateTimeField(db_index=True)
     
-    start_price = models.DecimalFieldmax_digits=6, decimal_places=2)
-    current_price =  models.DecimalFieldmax_digits=6, decimal_places=2)
+    start_price = models.DecimalField(max_digits=6, decimal_places=2)
+    current_price =  models.DecimalField(max_digits=6, decimal_places=2)

@@ -7,6 +7,6 @@ gevent==0.13.7
 gevent-socketio==0.2.1
 gevent-websocket==0.3.6
 greenlet==0.4.0
-ipython==0.13
+ipython==7.16.3
 sphinx-me==0.1.2
 wsgiref==0.1.2
